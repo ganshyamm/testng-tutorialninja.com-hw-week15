@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [testsuite]">
+  <listeners>
+    <listener class-name="com.tutorialninja.customlisteners.CustomListeners"/>
+    <listener class-name="org.uncommons.reportng.HTMLReporter"/>
+    <listener class-name="org.uncommons.reportng.JUnitXMLReporter"/>
+  </listeners>
+  <test thread-count="5" name="Login Test(failed)">
+    <classes>
+      <class name="com.tutorialninja.testsuite.DesktopsPageTest">
+        <methods>
+          <include name="setUp"/>
+          <include name="verifyProductAddedToShoppingCartSuccessFully"/>
+          <include name="tearDown"/>
+          <include name="inIt"/>
+        </methods>
+      </class> <!-- com.tutorialninja.testsuite.DesktopsPageTest -->
+      <class name="com.tutorialninja.testsuite.AccountLoginPageTest">
+        <methods>
+          <include name="setUp"/>
+          <include name="tearDown"/>
+          <include name="verifyUserShouldNavigateToLoginPageSuccessfully"/>
+          <include name="verifyThatUserShouldLoginAndLogoutSuccessfully"/>
+        </methods>
+      </class> <!-- com.tutorialninja.testsuite.AccountLoginPageTest -->
+      <class name="com.tutorialninja.testsuite.AccountRegisterPageTest">
+        <methods>
+          <include name="setUp"/>
+          <include name="tearDown"/>
+          <include name="inIt"/>
+          <include name="verifyThatUserShouldLoginAndLogoutSuccessfully"/>
+        </methods>
+      </class> <!-- com.tutorialninja.testsuite.AccountRegisterPageTest -->
+      <class name="com.tutorialninja.testsuite.LaptopsAndNotebooksPageTest">
+        <methods>
+          <include name="setUp"/>
+          <include name="tearDown"/>
+          <include name="verifyThatUserPlaceOrderSuccessfully"/>
+          <include name="inIt"/>
+        </methods>
+      </class> <!-- com.tutorialninja.testsuite.LaptopsAndNotebooksPageTest -->
+    </classes>
+  </test> <!-- Login Test(failed) -->
+</suite> <!-- Failed suite [testsuite] -->
